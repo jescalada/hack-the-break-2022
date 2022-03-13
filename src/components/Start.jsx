@@ -15,12 +15,13 @@ export default function Start({ setUserName }) {
                 <img src={chrisName} className="chrisName" />
                 <img src={theGame} className="theGame" />
             </div>
-            <div className="inputValue">
-                <img src={chrispic} className="chirsleft"/>
-                <div>
-                <input placeholder="enter your name" className="startInput" ref={inputRef} />
-                <button className="startButton" onClick={handleClick}>
-                    Start</button>
+            <div className="bottomContainer">
+                <img src={chrispic} className="chirsleft" />
+                <img src={chrispic} className="chirsright" />
+                <div className="inputValue">
+                    <input placeholder="enter your name" className="startInput" ref={inputRef} />
+                    <button className="startButton" onClick={handleClick}>
+                        START</button>
                 </div>
             </div>
         </div>

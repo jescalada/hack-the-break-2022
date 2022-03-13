@@ -175,8 +175,8 @@
     margin:auto;
     justify-content: space-around;
 }
-
-.inputValue{
+/* 
+.bottomContainer{
     width: 250px;
     height: 150px;
     display: flex;
@@ -189,7 +189,7 @@
     right:0;
     margin:auto;
     justify-content: space-around;
-}
+} */
 
 .startInput{
     width: 100%;
@@ -217,7 +217,41 @@
 }
 
 .chirsleft {
-    width: 300px;
+    transform: scaleX(-1);
+    width: 350px;
+    flex-direction: column;
+    align-items: right;
+    position: absolute;
+    top: 120px;
+    bottom:0;
+    left:-600px;
+    right:0px;
+}
+
+.chirsright {
+    width: 350px;
+    flex-direction: column;
+    align-items: right;
+    position: absolute;
+    top: 120px;
+    bottom:0;
+    left:500px;
+    right:0px;
+}
+
+.inputValue{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 420px;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    justify-content: space-around;
 }
 
 .topContainer {
@@ -227,10 +261,11 @@
 
 .chrisName {
     position: relative;
-    margin-left: 200px;
+    margin-left: 125px;
     margin-bottom: 50px;
 }
 
 .theGame {
     margin-top: -80px;
+    width: 900px;
 }

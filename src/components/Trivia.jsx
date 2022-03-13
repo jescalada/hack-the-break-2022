@@ -3,6 +3,8 @@ import useSound from 'use-sound';
 import when_playing from "../assets/when_playing.mp3";
 import when_correct from "../assets/when_correct.mp3";
 import when_wrong from "../assets/when_wrong.mp3";
+import when_correct1 from "../assets/when_correct1.mp3";
+import when_wrong1 from "../assets/when_wrong1.mp3";
 
 export default function Trivia({ data, setStop, questionNumber, setQuestionNumber }) {
     const [question, setQuestion] = useState(null);
@@ -11,6 +13,9 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
     const [letsPlay] = useSound(when_playing);
     const [correctAnswer] = useSound(when_correct);
     const [wrongAnswer] = useSound(when_wrong);
+    
+    const [correctAnswer1] = useSound(when_correct1);
+    const [wrongAnswer1] = useSound(when_wrong1);
 
     useEffect(() => {
         letsPlay();
@@ -29,16 +34,28 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
     const handleClick = (a) => {
         setSelectedAnswer(a);
         setClassName("answer active");
-        delay(3000, () => setClassName(a.correct ? "answer correct" : "answer wrong"));
-        delay(6000, () => {
+        delay(2000, () => setClassName(a.correct ? "answer correct" : "answer wrong"));
+            delay(3000, () => {
             if (a.correct) {
-                // correctAnswer();
+                if (Math.random() > 0.5) {
+                    correctAnswer();
+                } else {
+                    correctAnswer1();
+                }
+                delay(2000, () => {
                 setQuestionNumber((prev) => prev + 1);
                 setSelectedAnswer(null);
-            } else {
-                // wrongAnswer();
-                setStop(true);
+            });
             }
+          else {
+                if (Math.random() > 0.5) {
+                    wrongAnswer();
+                } else {
+                    wrongAnswer1();
+                }
+                delay(2000, () => {
+                setStop(true);
+            })}
         });
     };
 

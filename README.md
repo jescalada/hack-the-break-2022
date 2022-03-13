@@ -1,5 +1,5 @@
 # Play the Game here!
-[CHRIS: THE GAME](chris-the-game.netlify.app)
+[CHRIS: THE GAME](https://chris-the-game.netlify.app/)
 
 # Getting Started with Create React App
 

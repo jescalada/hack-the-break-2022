@@ -9,7 +9,7 @@ function App() {
   const [username, setUserName] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
-  const [earned, setEarned] = useState("$ 0");
+  const [earned, setEarned] = useState("0 points");
 
 const data = [
     {
@@ -25,40 +25,40 @@ const data = [
                 correct : false
             },
             {
-                text : 'p("Hello World")',
+                text : 'System.out.println("Hello World")',
                 correct : false
             },
             {
-                text : 'echo("Hello World");',
+                text : 'console.log("Hello World");',
                 correct : false
             }
         ]
     },
     {
-        id : 2,
-        question : 'How do you insert COMMENTS in Python code?',
-        answers : [
-            {
-                text : '#This is a comment',
-                correct : true
-            },
-            {
-                text : '//This is a comment',
-                correct : false
-            },
-            {
-                text : '/*This is a comment*/',
-                correct : false
-            },
-            {
-                text : 'Nothing',
-                correct : false
-            }
-        ]
+      id : 2,
+      question : 'What is the correct file extension for Python files?',
+      answers : [
+          {
+              text : '.pyt',
+              correct : false
+          },
+          {
+              text : '.pt',
+              correct : false
+          },
+          {
+              text : '.pyth',
+              correct : false
+          },
+          {
+              text : '.py',
+              correct : true
+          }
+      ]
     },
     {
         id : 3,
-        question : 'Which one is NOT a legal variable name?',
+        question : 'Which one of these is NOT a legal variable name in Python?',
         answers : [
             {
                 text : 'Myvar',
@@ -80,66 +80,66 @@ const data = [
     },
     {
         id : 4,
-        question : 'How do you create a variable with the numeric value 5?',
+        question : 'Which ONE of the following is NOT a Python keyword?',
         answers : [
             {
-                text : 'Both the other answers are correct',
+                text : 'without',
                 correct : true
             },
             {
-                text : 'x = 5',
+                text : 'nonlocal',
                 correct : false
             },
             {
-                text : 'x = int(5)',
+                text : 'del',
                 correct : false
             },
             {
-                text : 'Nothing',
+                text : 'def',
                 correct : false
             }
         ]
     },
     {
-        id : 5,
-        question : 'What is the correct file extension for Python files?',
-        answers : [
-            {
-                text : '.py',
-                correct : true
-            },
-            {
-                text : '.pt',
-                correct : false
-            },
-            {
-                text : '.pyth',
-                correct : false
-            },
-            {
-                text : '.pyt',
-                correct : false
-            }
-        ]
+      id : 5,
+      question : 'Which ONE of the following can be used with lists AND with tuples?',
+      answers : [
+          {
+              text : 'remove()',
+              correct : false
+          },
+          {
+              text : 'sort()',
+              correct : false
+          },
+          {
+              text : 'append()',
+              correct : false
+          },
+          {
+              text : 'len()',
+              correct : true
+          }
+      ]
     },
     {
         id : 6,
-        question : 'How do you create a variable with the floating number 2.8?',
+        question : 'How can you create a variable with the value 2.8 in Python?',
         answers : [
-            {
-                text : 'Both the other answers are correct',
+          {
+            text : 'x = float(2.8)',
+            correct : false
+          },
+          {
+            text : 'x = 2.8',
+            correct : false
+          },  
+          {
+                text : 'Both',
                 correct : true
             },
             {
-                text : 'x = float(2.8)',
-                correct : false
-            },
-            {
-                text : 'x = 2.8',
-                correct : false
-            },
-            {
-                text : 'Nothing',
+                text : 'Neither',
                 correct : false
             }
         ]
@@ -168,67 +168,67 @@ const data = [
     },
     {
         id : 8,
-        question : 'What is the correct way to create a function in Python?',
+        question : 'Which ONE of the following is not always a part of a function definition?',
         answers : [
             {
-                text : 'def myFunction():',
+                text : 'keyword def',
+                correct : false
+            },
+            {
+                text : 'possibly empty list of comma-separated parameters wrapped in parentheses',
+                correct : false
+            },
+            {
+                text : 'keyword return',
                 correct : true
             },
             {
-                text : 'function myfunction():',
-                correct : false
-            },
-            {
-                text : 'create myFunction():',
-                correct : false
-            },
-            {
-                text : 'myFunction() => ',
+                text : 'function name',
                 correct : false
             }
         ]
     },
     {
         id : 9,
-        question : 'Which method can be used to remove any whitespace from both the beginning and the end of a string?',
+        question : 'Suppose I write a = 5 and b = 5. Are a and b bound to the same object in memory, or are they bound to different integer objects at different addresses, each containing the integer 5?',
         answers : [
             {
-                text : 'trim()',
+                text : "ints aren't objects Chris what are you talking about",
                 correct : false
             },
             {
-                text : 'strip()',
+                text : 'None of these choices is true',
+                correct : false
+            },
+            {
+                text : 'Same object -- a and b are aliases',
                 correct : true
             },
             {
-                text : 'len()',
-                correct : false
-            },
-            {
-                text : 'ptrim()',
+                text : 'Different objects -- each variable contains a different memory address',
                 correct : false
             }
         ]
     },
     {
         id : 10,
-        question : 'Which method can be used to return a string in upper case letters?',
+        question : 'Which one of these expressions is NOT part of the Zen of Python?',
         answers : [
             {
-                text : 'upper()',
+                text : 'Readability counts.',
+                correct : false
+            },
+            {
+                text : 'Now is better than never.',
+                correct : false
+            },
+            {
+                text : 'Beautiful is better than ugly.',
+                correct : false
+            },
+            {
+                text : 'Write once, run anywhere.',
                 correct : true
-            },
-            {
-                text : 'upperCase()',
-                correct : false
-            },
-            {
-                text : 'uppercase()',
-                correct : false
-            },
-            {
-                text : 'toUpperCase()',
-                correct : false
             }
         ]
     },
@@ -256,40 +256,40 @@ const data = [
     },
     {
         id : 12,
-        question : 'Which operator is used to multiply numbers?',
+        question : 'Which one of these statements is FALSE?',
         answers : [
             {
-                text : '#',
-                correct : false
-            },
-            {
-                text : 'x',
-                correct : false
-            },
-            {
-                text : '%',
-                correct : false
-            },
-            {
-                text : '*',
+                text : 'Python interns all the integers. All of them.',
                 correct : true
+            },
+            {
+                text : 'Variables contain addresses',
+                correct : false
+            },
+            {
+                text : 'When we assign a value to a variable, we are binding the address of the object to an identifier.',
+                correct : false
+            },
+            {
+                text : 'Variables that point the same object are aliases',
+                correct : false
             }
         ]
     },
     {
         id : 13,
-        question : 'Which operator can be used to compare two values?',
+        question : 'What is the best way to make a sorted copy of a list without modifying the original list?',
         answers : [
             {
-                text : '<>',
-                correct : false
-            },
-            {
-                text : '==',
+                text : 'Pass the list as an argument to the global sorted function and assign the return value to a new variable',
                 correct : true
             },
             {
-                text : '><',
+                text : "Invoke the list object's sorted method",
+                correct : false
+            },
+            {
+                text : "Invoke the list object's sort method and assign the return value to a new variable",
                 correct : false
             },
             {
@@ -300,48 +300,70 @@ const data = [
     },
     {
         id : 14,
-        question : 'Which of these collections defines a LIST?',
+        question : 'Which of these statements about scope is FALSE?',
         answers : [
             {
-                text : '{"name": "apple", "color": "green"}',
+                text : 'Built-in elements are always visible all the time. Period.',
                 correct : false
             },
             {
-                text : '{"apple", "banana", "cherry"}',
+                text : 'When a function ends, the local variables disappear from scope.',
                 correct : false
             },
             {
-                text : '("apple", "banana", "cherry")',
-                correct : false
-            },
-            {
-                text : '["apple", "banana", "cherry"]',
+                text : 'Global elements are never visible outside of the module in which they are defined.',
                 correct : true
+            },
+            {
+                text : 'Global variables are visible to all members of a module',
+                correct : false
             }
         ]
     },
     {
-        id : 15,
-        question : 'Which of these collections defines a TUPLE?',
-        answers : [
-            {
-                text : '("apple", "banana", "cherry")',
-                correct : true
-            },
-            {
-                text : '{"apple", "banana", "cherry"}',
-                correct : false
-            },
-            {
-                text : '["apple", "banana", "cherry"]',
-                correct : false
-            },
-            {
-                text : '{"name": "apple", "color": "green"}',
-                correct : false
-            }
-        ]
-    }
+      id : 15,
+      question : 'In addition to a list, the filter function accepts which ONE of the following:',
+      answers : [
+          {
+              text : 'A predicate function that returns True or False',
+              correct : true
+          },
+          {
+              text : 'A predicate function that returns an integer',
+              correct : false
+          },
+          {
+              text : 'A predicate function that returns None',
+              correct : false
+          },
+          {
+              text : 'A predicate function that returns a new list',
+              correct : false
+          }
+      ]
+  },
+  {
+    id : 16,
+    question : 'CONGRATULATIONS, YOU ARE A PYTHON MASTER!',
+    answers : [
+        {
+            text : 'See results',
+            correct : false
+        },
+        {
+            text : 'See results',
+            correct : false
+        },
+        {
+            text : 'See results',
+            correct : false
+        },
+        {
+            text : 'Please dont click here or else the game will crash',
+            correct : true
+        }
+    ]
+}
 ]
   const moneyPyramid = useMemo (() => 
     [

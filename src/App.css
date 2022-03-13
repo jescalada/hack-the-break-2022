@@ -130,7 +130,7 @@
 .moneyList {
     list-style: none;   
     width: 100%;
-    padding: 20px;    
+    padding: 10px;    
 }
 
 .moneyListItem {
@@ -147,7 +147,9 @@
 .moneyListItemNumber {
     font-size: 20px;
     font-weight: lighter;
-    width: 30%;
+    width: fit-content;
+    padding-left: 40px;
+    
 }
 
 .moneyListItemAmount {

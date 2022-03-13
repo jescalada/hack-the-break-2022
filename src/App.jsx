@@ -400,7 +400,7 @@ const data = [
         <>
       <div className="main">
         {stop ? (
-        <h2 className="endText">You earned: {earned}. {"\n"}The answer is <span id="sol">{solution.text}</span></h2>
+        <h2 className="endText">GAME OVER! You earned: {earned}. {"\n"}The answer is <span id="sol">{solution.text}</span>{"\n"}Refresh to play again</h2>
         ) : (
           <>
               <div className="top">

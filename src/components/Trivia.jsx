@@ -104,7 +104,7 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
             });
             }
           else {
-            let randomNum = Math.floor(Math.random() * 5);
+            let randomNum = Math.floor(Math.random() * 9);
                 if (randomNum === 0) {
                     wrongAnswer();
                 } else if (randomNum === 1) {
@@ -112,7 +112,15 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
                 } else if (randomNum === 2) {
                     wrongAnswer2();
                 } else if (randomNum === 3) {
+                    wrongAnswer2();
+                } else if (randomNum === 4) {
+                    wrongAnswer2();
+                } else if (randomNum === 5) {
                     wrongAnswer3();
+                } else if (randomNum === 6) {
+                    wrongAnswer3();
+                } else if (randomNum === 7) {
+                    wrongAnswer();
                 } else {
                     tricky();
                 }

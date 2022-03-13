@@ -345,21 +345,21 @@ const data = [
 ]
   const moneyPyramid = useMemo (() => 
     [
-      { id: 1, amount: "$1 00" },
-      { id: 2, amount: "$1 00" },
-      { id: 3, amount: "$1 00" },
-      { id: 4, amount: "$1 00" },
-      { id: 5, amount: "$1 00" },
-      { id: 6, amount: "$1 00" },
-      { id: 7, amount: "$1 00" },
-      { id: 8, amount: "$1 00" },
-      { id: 9, amount: "$1 00" },
-      { id: 10, amount: "$1 00" },
-      { id: 11, amount: "$1 00" },
-      { id: 12, amount: "$1 00" },
-      { id: 13, amount: "$1 00" },
-      { id: 14, amount: "$1 00" },
-      { id: 15, amount: "$1 00" },
+        { id: 1, amount: "$1 00" },
+        { id: 2, amount: "$1 00" },
+        { id: 3, amount: "$1 00" },
+        { id: 4, amount: "$1 00" },
+        { id: 5, amount: "$1 00" },
+        { id: 6, amount: "$1 00" },
+        { id: 7, amount: "$1 00" },
+        { id: 8, amount: "$1 00" },
+        { id: 9, amount: "$1 00" },
+        { id: 10, amount: "$1 00" },
+        { id: 11, amount: "$1 00" },
+        { id: 12, amount: "$1 00" },
+        { id: 13, amount: "$1 00" },
+        { id: 14, amount: "$1 00" },
+        { id: 15, amount: "$1 00" },
     ].reverse(),
   []
   );
@@ -369,6 +369,8 @@ const data = [
 
   }, [moneyPyramid, questionNumber]);
 
+  var solution = data[questionNumber - 1].answers.find((elem) => elem.correct === true);
+
 
   return (
     <div className="app">
@@ -376,7 +378,7 @@ const data = [
         <>
       <div className="main">
         {stop ? (
-        <h1 className="endText">You earned: {earned}</h1>
+        <h1 className="endText">You earned: {earned}. The answer is <span id="sol">{solution.text}</span></h1>
         ) : (
           <>
               <div className="top">

@@ -159,12 +159,13 @@
     position: relative;
     top: -30px;
     bottom: 0;
-    left: -250px;
+    left: -265px;
     right: 0;
     margin: auto;
     background-color: teal;
-    padding: 30px 50px;
+    padding: 30px 30px;
     border-radius: 30px;
+    white-space: pre-wrap;
 }
 
 .endText:after{
@@ -175,7 +176,7 @@
     content:"";
     position:relative;
     bottom:20px;
-    left: 70px;
+    left: 55px;
 }
 
 

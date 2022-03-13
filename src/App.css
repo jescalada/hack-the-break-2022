@@ -6,15 +6,17 @@
 }
 
 .main {
-    width: 75%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(2,2,50,0.5)),  url("./assets/chris.jpg") center;
+    width: 70%;
+    top: 100px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(2,2,50,0.7)),  url("./assets/chris.jpg") center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    vertical-align: text-top;
 }
 
 .top{
-    height:50%;
+    height: 70%;
     position: relative;
 
 }
@@ -36,7 +38,7 @@
 }
 
 .bottom {
-    height:50%;
+    height: 30%;
 
 }
 

@@ -378,7 +378,7 @@ const data = [
         <>
       <div className="main">
         {stop ? (
-        <h1 className="endText">You earned: {earned}. The answer is <span id="sol">{solution.text}</span></h1>
+        <h2 className="endText">You earned: {earned}. {"\n"}The answer is <span id="sol">{solution.text}</span></h2>
         ) : (
           <>
               <div className="top">

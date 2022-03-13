@@ -200,3 +200,18 @@
     background-color: lightgreen;
 
 }
+
+.topContainer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.chrisName {
+    position: relative;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.theGame {
+    margin-top: -80px;
+}

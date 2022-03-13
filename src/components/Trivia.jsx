@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import useSound from 'use-sound';
+import chrispic from '../assets/chris.jpg';
 
 import playing from "../assets/when_playing.mp3";
 import playing1 from "../assets/met_ur_mother.mp3";
@@ -65,6 +66,8 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
         }, duration);
     }
 
+    const [displayAnsewer, setDisplayAnswer] = useState(false);
+
     const handleClick = (a) => {
         setSelectedAnswer(a);
         setClassName("answer active");
@@ -91,6 +94,10 @@ export default function Trivia({ data, setStop, questionNumber, setQuestionNumbe
                 } else {
                     pythonicSound();
                 }
+
+                setDisplayAnswer(true);
+                setTimeout(() => setDisplayAnswer(false), 3000);
+
                 delay(2000, () => {
                 setQuestionNumber((prev) => prev + 1);
                 setSelectedAnswer(null);

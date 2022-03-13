@@ -175,7 +175,7 @@ const data = [
                 correct : false
             },
             {
-                text : 'possibly empty list of comma-separated parameters wrapped in parentheses',
+                text : 'possibly empty list of comma-separated\nparameters wrapped in parentheses',
                 correct : false
             },
             {
@@ -190,7 +190,7 @@ const data = [
     },
     {
         id : 9,
-        question : 'Suppose I write a = 5 and b = 5. Are a and b bound to the same object in memory, or are they bound to different integer objects at different addresses, each containing the integer 5?',
+        question : 'Suppose I write a = 5 and b = 5. \nAre a and b bound to the same object in memory, or are they bound to different integer objects at different addresses, each containing the integer 5?',
         answers : [
             {
                 text : "ints aren't objects Chris what are you talking about",
@@ -267,7 +267,7 @@ const data = [
                 correct : false
             },
             {
-                text : 'When we assign a value to a variable, we are binding the address of the object to an identifier.',
+                text : 'When we assign a value to a variable, \nwe are binding the address of the object to an identifier.',
                 correct : false
             },
             {
@@ -281,7 +281,7 @@ const data = [
         question : 'What is the best way to make a sorted copy of a list without modifying the original list?',
         answers : [
             {
-                text : 'Pass the list as an argument to the global sorted function and assign the return value to a new variable',
+                text : 'Pass the list as an argument \nto the global sorted function \nand assign the return value to a new variable',
                 correct : true
             },
             {
@@ -311,7 +311,7 @@ const data = [
                 correct : false
             },
             {
-                text : 'Global elements are never visible outside of the module in which they are defined.',
+                text : 'Global elements are never visible \noutside of the module in which they are defined.',
                 correct : true
             },
             {
@@ -359,7 +359,7 @@ const data = [
             correct : false
         },
         {
-            text : 'Please dont click here or else the game will crash',
+            text : `Please dont click here \n or else the game will crash`,
             correct : true
         }
     ]

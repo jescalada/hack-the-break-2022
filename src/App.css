@@ -8,8 +8,10 @@
 .main {
     width: 70%;
     top: 100px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(2,2,50,0.7)),  url("./assets/chris.jpg") center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(2,2,50,0.7)),  url("./assets/chris.png") center;
     background-repeat: no-repeat;
+    background-position: right;
+    background-size: 65%;
     display: flex;
     flex-direction: column;
     vertical-align: text-top;
@@ -22,8 +24,8 @@
 }
 
 .timer{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 5px solid white;
     display: flex;
@@ -32,13 +34,13 @@
     font-size: 30px;
     font-weight: 700;
     position: absolute;
-    bottom: 10px;
-    left: 80px;
+    top: 50px;
+    left: 50px;
 
 }
 
 .bottom {
-    height: 30%;
+    height: 38%;
 
 }
 
@@ -56,7 +58,7 @@
     border: 2px solid white;
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 20px;
 }
 
@@ -74,7 +76,7 @@
     text-align: center;
     background: linear-gradient(#0e0124, #22074d);
     border: 1px solid white;
-    border-radius: 15px;
+    border-radius: 30px;
     font-size: 20px;
     font-weight: 300px;
     margin: 0 10px 20px 10px;
@@ -134,7 +136,7 @@
 .moneyListItem {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
 }
 
@@ -143,7 +145,7 @@
 }
 
 .moneyListItemNumber {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: lighter;
     width: 30%;
 }
@@ -155,11 +157,25 @@
 
 .endText {
     position: relative;
-    top: 0;
+    top: -30px;
     bottom: 0;
-    left: 0;
+    left: -250px;
     right: 0;
     margin: auto;
+    background-color: teal;
+    padding: 30px 50px;
+    border-radius: 30px;
+}
+
+.endText:after{
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid teal;
+    content:"";
+    position:relative;
+    bottom:20px;
+    left: 70px;
 }
 
 
@@ -177,24 +193,9 @@
     margin:auto;
     justify-content: space-around;
 }
-/* 
-.bottomContainer{
-    width: 250px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 420px;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
-    justify-content: space-around;
-} */
 
 .startInput{
-    width: 100%;
+    width: 160%;
     height: 50px;
     border: none;
     border-radius: 10px;
@@ -207,7 +208,7 @@
 }
 
 .startButton{
-    width: 100%;
+    width: 160%;
     height: 50px;
     border: none;
     border-radius: 10px;
